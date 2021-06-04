@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Week 03</title>
+</head>
+<body>
+<script>
+    let calculator = {
+   read(){
+     this.a = +prompt("Enter a number: ", 0);
+     this.b = +prompt("Enter another number: ", 0);
+   },
+
+   sum(){
+     return this.a + this.b;
+   },
+
+   mul(){
+     return this.a * this.b;
+   }
+};
+
+calculator.read();
+alert( calculator.sum() );
+alert( calculator.mul() );
+
+</script>
+<h3>Calculator: Sum and Product</h3>
+<ol>
+    <li>Two prompts will ask for numbers.</li>
+    <li>The sum of the two numbers will be returned</li>
+    <li>The product of the two numbers will be returned</li>
+</ol>
+     
+    
+</body>
+</html>
