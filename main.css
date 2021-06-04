@@ -1,0 +1,31 @@
+body{
+    background-color: rgba(185, 250, 163, 0.742);
+    width: 100%;
+    text-align: center;
+    margin: auto;
+}
+
+#photo{
+    border-radius: 50%;
+    box-shadow: 10px 5px 5px black;
+}
+
+ol{
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+    
+}
+
+li{
+    text-align: start;
+    font-family:monospace;
+    font-size: 2rem;
+    padding: 10px;
+    flex: 1 0 33.33%
+}
+
+header, footer{
+    background-color:rgb(163, 220, 255);
+    border-radius: 10px;
+}
