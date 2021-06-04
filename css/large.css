@@ -1,0 +1,9 @@
+body{
+    background-color: rgba(185, 250, 163, 0.742);
+    width: 100%;
+    margin: auto;
+}
+
+header, footer{
+    text-align: center;
+}
