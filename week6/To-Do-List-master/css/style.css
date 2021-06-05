@@ -1,0 +1,185 @@
+/* ------------ youtube.com/CodeExplained ------------ */
+body{
+    padding: 0;
+    margin: 0;
+    font-family: monospace, sans-serif;
+}
+
+/* ------------ container ------------ */
+.container{
+    padding:25px;
+    width:380px;
+    margin:0 auto;
+    background-color: lightgray;
+    border-radius: 10px;
+}
+
+/* ------------ header ------------ */
+.header{
+    width: 380px;
+    height:100px;
+    background-color: rgb(31, 121, 255);
+    background-size: 100% 200%;
+    border-radius: 10px 10px 0 0;
+    position: relative;
+}
+.clear button{
+    width : 80px;
+    height: 35px;
+    position: absolute;
+    right:20px;
+    top: 10px;
+}
+.clear button{
+    font-size: 25px;
+    color:blue;
+}
+.clear button:hover{
+    cursor: pointer;
+    box-shadow: 1px 3px 5px #000;
+}
+#date{
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    color: rgb(252, 252, 252);
+    font-size: 30px;
+    font-family: monospace, sans-serif;
+}
+
+/* ------------ content ------------ */
+.content{
+    width:380px;
+    height: 350px;
+    max-height:350px;
+    background-color: white;
+    overflow: auto;
+}
+.content::-webkit-scrollbar { 
+    display: none; 
+}
+.content ul{
+    padding:0;
+    margin:0;
+}
+.item{
+    width:380px;
+    height: 45px;
+    min-height: 45px;
+    position: relative;
+    border-bottom: 1px solid rgba(0,0,0,0.1);
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+.item i.co{
+    position: absolute;
+    font-size: 25px;
+    padding-left:5px;
+    left:15px;
+    top:10px;
+}
+.item i.co:hover{
+    cursor: pointer;
+}
+.fa-check-circle{
+    color:#6eb200;
+}
+.item p.text{
+    position: absolute;
+    padding:0;
+    margin:0;
+    font-size: 20px;
+    left:50px;
+    top:5px;
+    background-color:white;
+    max-width:285px;
+}
+.lineThrough{
+    text-decoration: line-through;
+    color : #ccc;
+}
+.item i.de{
+    position: absolute;
+    font-size: 25px;
+    right:15px;
+    top:10px;
+}
+.item i.de:hover{
+    color:#af0000;
+    cursor: pointer;
+}
+/* ------------ add item ------------ */
+.add-to-do{
+    position: relative;
+    width: 360px;
+    height:40px;
+    background-color: #FFF;
+    padding: 10px;
+    border-top: 1px solid rgba(0,0,0,0.1);
+}
+.add-to-do i{
+    position: absolute;
+    font-size: 40px;
+    color: #4162f6;
+}
+
+.add-to-do input{
+    position: absolute;
+    left: 50px;
+    height: 35px;
+    width: 310px;
+    background-color: lightgray;
+    border: none;
+    border-radius: 10px;
+    font-size: 20px;
+    padding-left:10px;
+}
+.add-to-do input::-webkit-input-placeholder {
+    color: #4162f6;
+    font-family: monospace, sans-serif;
+    font-size: 20px;
+}
+.add-to-do input::-moz-placeholder { 
+    color: #4162f6;
+    font-family: monospace, sans-serif;
+    font-size: 20px;
+}
+.add-to-do input:-ms-input-placeholder {
+    color: #4162f6;
+    font-family: monospace, sans-serif;
+    font-size: 20px;
+}
+.add-to-do input:-moz-placeholder { 
+    color: #4162f6;
+    font-family: monospace, sans-serif;
+    font-size: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
