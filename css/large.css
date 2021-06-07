@@ -1,7 +1,9 @@
-main{
-    background-color: rgba(185, 250, 163, 0.742);
-}
+@media only screen and (min-width: 1000px){
+    body{
+        width: 100%;
+        text-align:left;
+    
+    }
 
-header, footer{
-    text-align: center;
+
 }
