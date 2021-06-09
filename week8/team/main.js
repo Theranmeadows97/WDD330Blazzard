@@ -1,11 +1,11 @@
 const base = 'https://swapi.dev/api/';
-const people = 'people/?format=json';
+const people = 'people/';
 const url = base + people;
-
+const page = 'http://swapi.dev/api/people/?page=';
 let nextURL = '';
 let prevURL = '';
 
-function getJSON(url = base + people) {
+function getJSON(url) {
     return fetch(url)
     .then(response => response.json())
     .then(data => {
@@ -13,8 +13,10 @@ function getJSON(url = base + people) {
         nextURL = data.next;
         prevURL = data.previous;
 
+
         const charList = document.getElementById('character-list');
         const list = document.createElement('ul');
+        list.classList = 'charBox';
         data.results.map(makePerson).forEach(element => {
             list.appendChild(element)
         });;
@@ -30,11 +32,11 @@ function makePerson({
     skin_color, 
     eye_color, 
     birth_year, 
-    gender, 
-    homeworld
+    gender
 }) {
     const charEl = document.createElement('li');
-    charEl.innerHTML = `<h1>${name}</h1>
+    charEl.classList = 'charDetails';
+    charEl.innerHTML = `<h3 onclick="showDetails(this)">${name}</h3>
     <ul>
     <li>Height: ${height}</li>
     <li>Mass: ${mass}</li>
@@ -43,11 +45,29 @@ function makePerson({
     <li>Eye color: ${eye_color}</li>
     <li>Birth year: ${birth_year}</li>
     <li>Gender: ${gender}</li>
-    <li>Homeworld: ${homeworld}</li>
     </ul>`;
     return charEl;
 }
+
+function showDetails(element){
+    const list = element.nextSibling.nextSibling;
+    if (list.style.display === "none") {
+        list.style.display = "block";
+      } else {
+        list.style.display = "none";
+      }
+}
+
 document.querySelector('#nextButton').addEventListener('click', function(event){getJSON(nextURL)});
 document.querySelector('#prevButton').addEventListener('click', function(event){getJSON(prevURL)});
+document.querySelector('#page1').addEventListener('click', function(event){getJSON(page+'1')});
+document.querySelector('#page2').addEventListener('click', function(event){getJSON(page+'2')});
+document.querySelector('#page3').addEventListener('click', function(event){getJSON(page+'3')});
+document.querySelector('#page4').addEventListener('click', function(event){getJSON(page+'4')});
+document.querySelector('#page5').addEventListener('click', function(event){getJSON(page+'5')});
+document.querySelector('#page6').addEventListener('click', function(event){getJSON(page+'6')});
+document.querySelector('#page7').addEventListener('click', function(event){getJSON(page+'7')});
+document.querySelector('#page8').addEventListener('click', function(event){getJSON(page+'8')});
+document.querySelector('#page9').addEventListener('click', function(event){getJSON(page+'9')});
 
-getJSON();
+getJSON(url);

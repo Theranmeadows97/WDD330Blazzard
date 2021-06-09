@@ -28,10 +28,15 @@ fetch(req)
         for(let i = 0; i < planets.length; i++){
             let card = document.createElement('section');
             let name = document.createElement('h3');
+            name.setAttribute("onclick", "showDetails()");
             let rotationPeriod = document.createElement('p');
+            rotationPeriod.setAttribute("style", "display: none;");
             let orbitalPeriod = document.createElement('p');
+            orbitalPeriod.setAttribute("style", "display: none;");
             let size = document.createElement('p');
+            size.setAttribute("style", "display: none;");
             let climate = document.createElement('p');
+            climate.setAttribute("style", "display: none;");
             
             name.textContent = (i+1) + "- " + planets[i].name;
             rotationPeriod.textContent = "Rotation Period: " + planets[i].rotation_period;
@@ -52,5 +57,12 @@ fetch(req)
         console.log("ERROR", err.message);
     });
 
-document.querySelector('#nextButton').addEventListener('click', function(event){jsonData(nextURL)});
-document.querySelector('#prevButton').addEventListener('click', function(event){jsonData(prevURL)});
+
+function showDetails(){
+    let details = document.querySelector("p");
+    if (details.style.display === "none") {
+        details.style.display = "block";
+      } else {
+        details.style.display = "none";
+      }
+}
