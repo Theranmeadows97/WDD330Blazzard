@@ -20,7 +20,6 @@ fetch(req)
         } else {
             throw new Error('NOT SUCCESSFUL');
         }
-
     })
     .then( (jsonData) => {
         console.log(jsonData);
@@ -34,7 +33,6 @@ fetch(req)
             let size = document.createElement('p');
             let climate = document.createElement('p');
             
-
             name.textContent = (i+1) + "- " + planets[i].name;
             rotationPeriod.textContent = "Rotation Period: " + planets[i].rotation_period;
             orbitalPeriod.textContent = "Orbital Period: " +  planets[i].orbital_period;
@@ -48,11 +46,7 @@ fetch(req)
             card.appendChild(climate);
 
             document.querySelector("#container").appendChild(card);
-
         }
-        
-        
-
     })
     .catch( (err) => {
         console.log("ERROR", err.message);
