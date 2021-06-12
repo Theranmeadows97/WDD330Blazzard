@@ -1,0 +1,121 @@
+.container{
+    border: black solid 5px;
+}
+.parent{
+    background-color: blue;
+    height: 50px;
+    width: 300px;
+    margin-top: 10px;
+}
+
+.parent p{
+    position: absolute;
+
+}
+
+.child{
+    position: absolute;
+    background-color: red;
+    height: 50px;
+    width:300px;
+    transition:2s cubic-bezier(0.82,-0.26, 0.13, 1.37);
+}
+
+.cross-container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.parent:hover .child{
+    background-color: green;
+    transform: translateX(100%);
+}
+
+.cross-container:hover .sword{
+    transform: rotate(45deg);
+    transform-origin: 5% 100%;
+}
+
+.sword{
+    transition: 1s;
+}
+
+.sword .tip{
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 90px solid gray;
+    position: relative;
+    left:65px;
+}
+
+.sword .blade{
+    width: 60px;
+    height: 200px;
+    background-color: gray;
+    position: relative;
+    left:65px;
+}
+
+.sword .hilt{
+    width: 180px;
+    height: 30px;
+    background-color: black;
+    border: brown solid 5px;
+}
+
+.sword .handle{
+    width: 20px;
+    height: 60px;
+    background-color: silver;
+    border: brown solid 5px;
+    position: relative;
+    left:80px;
+}
+
+/* SWORD 2 */
+
+.cross-container:hover .sword-2{
+    transform: rotate(-45deg);
+    transform-origin: 100% 50%;
+    
+}
+
+.sword-2{
+    transition: 1s;
+}
+
+.sword-2 .tip-2{
+    width: 0;
+    height: 0;
+    border-left: 30px solid transparent;
+    border-right: 30px solid transparent;
+    border-bottom: 90px solid gray;
+    position: relative;
+    left:65px;
+}
+
+.sword-2 .blade-2{
+    width: 60px;
+    height: 200px;
+    background-color: gray;
+    position: relative;
+    left:65px;
+}
+
+.sword-2 .hilt-2{
+    width: 180px;
+    height: 30px;
+    background-color: black;
+    border: brown solid 5px;
+}
+
+.sword-2 .handle-2{
+    width: 20px;
+    height: 60px;
+    background-color: silver;
+    border: brown solid 5px;
+    position: relative;
+    left:80px;
+}
