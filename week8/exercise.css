@@ -33,7 +33,7 @@
 
 .cross-container:hover .sword{
     transform: rotate(45deg);
-    transform-origin: 5% 100%;
+    transform-origin: 50% 100%;
 }
 
 .sword{
