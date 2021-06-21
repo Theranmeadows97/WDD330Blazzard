@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Assign08</title>
+</head>
+
+<body>
+    <h2 style="text-align: center; list-style-position: inside;">This will be assignment #08</h2>
+    <form action="">
+        <label for="first_name">First Name:</label><br>
+        <input type="text" id="first_name" name="first_name"><br>
+        <label for="last_name">Last Name:</label><br>
+        <input type="text" id="last_name" name="last_name"><br>
+        <label for="address">Address</label><br>
+        <textarea id="address" name="address"></textarea><br>
+        <label for="phone" pattern="[0-9]{3} [-] [0-9]{3} [-] [0-9]{4}">Phone (must be of the format "208-555-5555")</label><br>
+        <input type="text" id="phone" name="phone"><br>
+        <div>
+            <br><img src="item_0.jpg" alt="item_0"><br>
+            <input type="checkbox" id="item_0" name="item_0">
+            <label for="item_0">Composition 0: $75.95</label><br>
+        </div>
+        <div>
+            <br><img src="item_1.jpg" alt="item_1"><br>
+            <input type="number" id="quantity" name="qty_1" value="0">
+            <label for="qty_1">Composition 1: $85.95</label><br>
+        </div>
+        <div>
+            <br><img src="item_2.jpg" alt="item_2"><br>
+            <input type="checkbox" id="item_2" name="item_2">
+            <label for="item_2">Composition 2: $15.95</label><br>
+        </div>
+        <div>
+            <br><img src="item_3.jpg" alt="item_3"><br>
+            <input type="number" id="quantity" name="qty_3" value="0">
+            <label for="qty_3">Composition 3: $25.95</label><br>
+        </div>
+        <div>
+            <br><img src="item_4.jpg" alt="item_4"><br>
+            <input type="checkbox" id="item_4" name="item_4">
+            <label for="item_4">Composition 4: $25.95</label><br>
+        </div>
+        <div>
+            <br><img src="item_5.jpg" alt="item_5"><br>
+            <input type="number" id="quantity" name="qty_5" value="0">
+            <label for="qty_5">Composition 5: $45.95</label><br>
+        </div>
+        <div>
+            <br><img src="item_6.jpg" alt="item_6"><br>
+            <input type="checkbox" id="item_6" name="item_6">
+            <label for="item_6">Composition 6: $35.95</label><br>
+        </div>
+        <div>
+            <br><img src="item_7.jpg" alt="item_7"><br>
+            <input type="number" id="quantity" name="qty_7" value="0">
+            <label for="qty_7">Composition 7: $75.95</label><br>
+        </div>
+        <div>
+            <br><img src="item_8.jpg" alt="item_8"><br>
+            <input type="checkbox" id="item_8" name="item_8">
+            <label for="item_8">Composition 8: $65.95</label><br>
+        </div>
+        <p>Total to be paid:</p>
+        <input type="text" class="total" id="outputTotal"><br>
+
+        <br><input type="radio" id="visa" name="card" value="visa">
+        <label for="visa">Visa</label>
+        <input type="radio" id="mastercard" name="card" value="mastercard">
+        <label for="mastercard">MasterCard</label>
+        <input type="radio" id="americanexpress" name="card" value="americanexpress">
+        <label for="americanexpress">American Express</label><br>
+
+        <br><label for="credit_card" pattern="[0-9]{4} [ ] [0-9]{4} [ ] [0-9]{4} [ ] [0-9]{4}">Credit Card # (Must be 16 digits)</label><br>
+        <input type="text" id="credit_card" name="credit_card"><br>
+        <label for="exp_date">Credit Card Expiration Date</label><br>
+        <input type="text" id="exp_date" name="exp_date"><br>
+
+        <br><input type="reset" value="Reset">
+        <input type="submit" onclick="exemple()" value="Validate"><br>
+        <br><input type="text" class="error" id="outputDiv"><br>
+    </form>
+    <script>
+        function exemple() {
+            let qty_1 = parseFloat(document.getElementById("qty_1").value);
+            let qty_3 = parseFloat(document.getElementById("qty_3").value);
+            let qty_5 = parseFloat(document.getElementById("qty_5").value);
+            let qty_7 = parseFloat(document.getElementById("qty_7").value);
+            let total = 0;
+            if (document.getElementById("item_0").checked == true) {
+                total += 75.95;
+                return total;
+            } else if (document.getElementById("item_2").checked == true) {
+                total += 15.95;
+                return total;
+            } else if (document.getElementById("item_4").checked == true) {
+                total += 25.95;
+                return total;
+            } else if (document.getElementById("item_6").checked == true) {
+                total += 35.95;
+                return total;
+            } else if (document.getElementById("item_8").checked == true) {
+                total += 65.95;
+                return total;
+            } else {
+                total += (qty_1 * 85.95) + (qty_3 * 25.95) + (qty_5 * 45.95) + (qty_7 * 75.95);
+                return total;
+            }
+            document.getElementById("outputTotal").value = total.toFixed(2);
+        }
+    </script>
+</body>
+
+</html>
