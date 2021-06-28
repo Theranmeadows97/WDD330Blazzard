@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Form Validation Practice</title>
+    <style>
+        input:invalid{
+            border: 2px solid red;
+        }
+
+        input:valid{
+            border: 2px solid green;
+        }
+
+        input, label{
+            display: block;
+        }
+
+    </style>
+</head>
+<body>
+    <h1>Form Validation Pratice</h1>
+    <form action="">
+        <label for="question">Do you prefer to eat a banana or a cherry?</label>
+        <input type="text" class="question" name="yourName" required pattern="[Bb]anana|[Cc]herry">
+
+        <label for="question">Do you prefer cats or dogs?</label>
+        <input type="text" class="question" name="catsOrDogs" required pattern="[Cc]ats|[Dd]ogs">
+
+        <label for="question">What is your favorite color of the rainbow?(red, orange, yellow, green, blue, indigo, violet)</label>
+        <input type="text" classs="question" name="color" required pattern="[Rr]ed|[Oo]range|[Yy]ellow|[Gg]reen|[Bb]lue|[Ii]ndigo|[Vv]iolet">
+
+        <label for="question">Please enter a username.(more than 5 but less than 12 characters)</label>
+        <input type="text" class="question" name="username" required pattern="[a-zA-Z\d]{5,12}">
+        <button>Submit</button>
+    </form>
+    
+</body>
+</html>
